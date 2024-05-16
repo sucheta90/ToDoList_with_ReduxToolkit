@@ -3,6 +3,7 @@ import CompletedTasks from "./components/CompletedTasks";
 import Header from "./components/Header";
 import ToDoList from "./components/TodoList";
 import { useState } from "react";
+
 function App() {
   const [addNew, setAddNew] = useState(false);
   return (
