@@ -9,7 +9,7 @@ import {
   editTask,
   deleteTask,
   toDoListReducer,
-} from "./slices/toDoListSlice";
+} from "./slices/toDoListSlice.js";
 
 const store = configureStore({
   reducer: {

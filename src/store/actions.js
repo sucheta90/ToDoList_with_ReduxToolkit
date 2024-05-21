@@ -1,1 +1,2 @@
-export const appReset = "app/reset";
+import { createAction } from "@reduxjs/toolkit";
+export const appReset = createAction("app/reset"); // action creator
