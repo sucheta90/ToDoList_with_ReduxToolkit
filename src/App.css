@@ -48,7 +48,7 @@ ul {
 
 .todo-container,
 .completed-list-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 2em;
 }
 .todo-item {
