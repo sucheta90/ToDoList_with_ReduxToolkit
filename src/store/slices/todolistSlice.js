@@ -17,7 +17,13 @@ const toDoListSlice = createSlice({
     },
     // eslint-disable-next-line no-unused-vars
     deleteTask(state, action) {
-      //
+      const index = state.indexOf(action.payload);
+      state.splice(index, 1);
+      let currentList = JSON.parse(localStorage.getItem("toDoList")) || [];
+      const indexInLocal = currentList.indexOf(action.payload);
+      currentList.splice(indexInLocal, 1);
+      localStorage.removeItem("toDoList");
+      localStorage.setItem("toDoList", JSON.stringify(currentList));
     },
   },
   extraReducers(builder) {
