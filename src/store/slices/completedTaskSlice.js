@@ -7,9 +7,11 @@ const completedTaskSlice = createSlice({
   reducers: {
     addCompletedTask(state, action) {
       state.push(action.payload);
+      localStorage.setItem("completedTasks", JSON.stringify(state));
     },
   },
   extraReducers(builder) {
+    // eslint-disable-next-line no-unused-vars
     builder.addCase(appReset, (state, action) => {
       return [];
     });

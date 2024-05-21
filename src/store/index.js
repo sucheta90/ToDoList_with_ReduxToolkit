@@ -13,8 +13,8 @@ import {
 
 const store = configureStore({
   reducer: {
-    toDoListReducer: toDoListReducer,
-    completedTaskReducer: completedTaskReducer,
+    toDoList: toDoListReducer,
+    completedTasks: completedTaskReducer,
   },
 });
 
