@@ -4,7 +4,7 @@ import CompletedTasks from "./components/CompletedTasks";
 import Header from "./components/Header";
 import ToDoList from "./components/TodoList";
 import { useState } from "react";
-import { addTask } from "./store";
+import { addTask, appReset } from "./store";
 import { useDispatch } from "react-redux";
 function App() {
   const dispatch = useDispatch();
@@ -36,7 +36,13 @@ function App() {
         >
           Add New Task
         </button>
-        <button>Reset All</button>
+        <button
+          onClick={(e) => {
+            dispatch(appReset());
+          }}
+        >
+          Reset All
+        </button>
       </div>
       {addNew ? (
         <div className="task-input-field">
